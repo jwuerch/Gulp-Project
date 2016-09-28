@@ -1,7 +1,9 @@
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
-      cleanCSS = require('gulp-clean-css'),
-      concatCSS = require('gulp-concat-css');
+      cleanCSS = require('gulp-cssnano'),
+      useref = require('gulp-useref'),
+      uglify = require('gulp-uglify'),
+      gulpIf = require('gulp-if');
 
 gulp.task('sass', function() {
     return gulp.src('site/scss/*.scss')
@@ -9,9 +11,15 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('site/css/'));
 });
 
-gulp.task('cleancss', function() {
+gulp.task('minify', function() {
     return gulp.src('site/css/*.css')
-    .pipe(concatCSS(''))
-    .pipe(cleanCSS())
+    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulpIf('*.js', uglify()))
     .pipe(gulp.dest('dist/css'));
 });
+
+gulp.task('useref', function() {
+    return gulp.src('site/*.html')
+    .pipe(useref())
+    .pipe(gulp.dest('dist'));
+})
