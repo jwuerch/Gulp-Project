@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
     "gulp-cssnano": "^2.1.2",
@@ -20,6 +22,9 @@
     "gulp-svg-sprites": "^4.0.2",
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.2",
-    "gulp.spritesmith": "^6.2.1"
+    "gulp-wait": "0.0.2",
+    "run-sequence": "^1.2.2",
+    "sprity": "^1.0.8",
+    "sprity-sass": "^1.0.4"
   }
 }
