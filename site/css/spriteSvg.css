@@ -1,18 +1,33 @@
 .icon {
-  font-size: 10px; }
+    font-size: 10px;
+}
 
 .icon:before {
-  content: ' ';
-  vertical-align: middle;
-  display: inline-block;
-  background-image: url("../spriteSvg.svg");
-  background-repeat: no-repeat;
-  background-size: 0em 0em; }
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../images/svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 17.5em 59.5em;
+}
 
 .no-svg .icon:before {
-  background-image: url("../spriteSvg.png"); }
+    background-image: url("../images/svg/sprite.png");
+}
 
-.icon.spriteSvg:before {
-  background-position: 0em 0em;
-  width: 0em;
-  height: 0em; }
+
+
+  .icon.fernandes-footer-logo:before {
+      background-position: 0em 0em;
+      width: 17.5em;
+      height: 8.45em;
+  }
+
+
+
+
+  .icon.sprite:before {
+      background-position: 0em -8.5em;
+      width: 17.5em;
+      height: 51em;
+  }

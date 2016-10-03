@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
     <meta http-equiv="pragma" content="no-cache"/>
     <title>Icon kit preview | gulp-svg-sprites</title>
-    <link href="../../scss/spriteSvg.scss" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/spriteSVG.css" rel="stylesheet" type="text/css" media="all"/>
     <style type="text/css">@CHARSET "UTF-8";
     * {
         box-sizing: border-box;
@@ -157,13 +157,13 @@
     <h1 id="logo">Gulp SVG Sprites</h1>
     <h4>Files Generated:</h4>
     <ol>
-        <li><a href="../../scss/spriteSvg.scss">../../scss/spriteSvg.scss</a></li>
-        <li><a href="spriteSvg.svg">spriteSvg.svg</a></li>
+        <li><a href="../css/spriteSVG.css">../css/spriteSVG.css</a></li>
+        <li><a href="svg/sprite.svg">svg/sprite.svg</a></li>
     </ol>
     <h4>Usage:</h4>
     <ol>
         <li>
-            Include the <a href="../../scss/spriteSvg.scss">CSS file</a> into your project.
+            Include the <a href="../css/spriteSVG.css">CSS file</a> into your project.
         </li>
         <li>
             Paste one of the snippets anywhere into your website.
@@ -178,16 +178,33 @@
 
       
 
-        <li title="spriteSvg">
-            <div class="icon-box" id="icon-box-spriteSvg">
-                <div class="icon spriteSvg"></div>
+        <li title="fernandes-footer-logo">
+            <div class="icon-box" id="icon-box-fernandes-footer-logo">
+                <div class="icon fernandes-footer-logo"></div>
             </div>
-            <h2>spriteSvg</h2>
-            <button onclick="showPopover('snippet-spriteSvg')">Show Snippet</button>
+            <h2>fernandes-footer-logo</h2>
+            <button onclick="showPopover('snippet-fernandes-footer-logo')">Show Snippet</button>
             <br/>
-            <button onclick="invertBackground('icon-box-spriteSvg')">Invert Background</button>
-            <div class="snippet-popover" id="snippet-spriteSvg">
-                <pre><code>&lt;span class=&quot;icon spriteSvg&quot;&gt;&lt;/span&gt;</code></pre>
+            <button onclick="invertBackground('icon-box-fernandes-footer-logo')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-fernandes-footer-logo">
+                <pre><code>&lt;span class=&quot;icon fernandes-footer-logo&quot;&gt;&lt;/span&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+
+
+      
+
+        <li title="sprite">
+            <div class="icon-box" id="icon-box-sprite">
+                <div class="icon sprite"></div>
+            </div>
+            <h2>sprite</h2>
+            <button onclick="showPopover('snippet-sprite')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-sprite')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-sprite">
+                <pre><code>&lt;span class=&quot;icon sprite&quot;&gt;&lt;/span&gt;</code></pre>
                 <button onclick="hidePopover()">Close</button>
             </div>
         </li>

@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../spriteSvg.svg");
     background-repeat: no-repeat;
-    background-size: 0em 0em;
+    background-size: 17.5em 17em;
 }
 
 .no-svg .icon:before {
@@ -17,10 +17,19 @@
 
 
 
-  .icon.spriteSvg:before {
+  .icon.fernandes-footer-logo:before {
       background-position: 0em 0em;
-      width: 0em;
-      height: 0em;
+      width: 17.5em;
+      height: 8.45em;
+  }
+
+
+
+
+  .icon.spriteSvg:before {
+      background-position: 0em -8.5em;
+      width: 17.5em;
+      height: 8.5em;
   }
 
 

@@ -1,2 +1,30 @@
+
 .icon {
-  background-image: url("../images/sprite.png"); }
+  background-image: url('../images/sprite.png');
+}
+
+.icon-SS2-copy {
+  background-position: -0px -0px;
+  width: 984px;
+  height: 128px;
+}
+.icon-SS2 {
+  background-position: -0px -128px;
+  width: 984px;
+  height: 128px;
+}
+.icon-SS1 {
+  background-position: -0px -256px;
+  width: 836px;
+  height: 132px;
+}
+.icon-Screen-Shot-2016-10-01-at-12 {
+  background-position: -0px -388px;
+  width: 250px;
+  height: 196px;
+}
+.icon-download1 {
+  background-position: -0px -584px;
+  width: 233px;
+  height: 233px;
+}

@@ -6,11 +6,11 @@ const gulp = require('gulp'),
       useref = require('gulp-useref'),
       uglify = require('gulp-uglify'),
       gulpIf = require('gulp-if'),
-      inject = require('gulp-inject-string'), // Injects strings into web files. Used to properly label minified CSS and JS files.
+      inject = require('gulp-inject-string'),
       imagemin = require('gulp-imagemin'),
       cache = require('gulp-cache'),
       reaname = require('gulp-rename'),
-      svgSprite = require('gulp-svg-sprites'), // Only good for SVG files
+      svgSprite = require('gulp-svg-sprites'),
       runSequence = require('run-sequence'),
       sprity = require('sprity'),
       del = require('del'),
@@ -19,7 +19,7 @@ const gulp = require('gulp'),
 /********* Snippets ***********/
 const snippets = {
     scriptTag: "<!--============================ Scripts ============================-->\n\t\t",
-    cssTag: "<!--============================ CSS ============================-->\n\t\t"
+    cssTag: "<!--============================ CSS ============================-->\n\t\t",
 }
 
 /********* Tasks *********/
@@ -42,25 +42,23 @@ gulp.task('imagemin', function() {            // Compresses all images.
 gulp.task('sprite', function() { // Runs both svgSprite and Sprity
     sprity.src({
         src: 'site/images/**/*.{png,jpg}',
-        style:'site/sprite.scss',
-        processor:'sass',
+        style:'site/sprite.css',
     })
-    .pipe(gulpIf('*.png', gulp.dest('site/images/sprite'), gulp.dest('site/scss'))) //Need to create separate sprite
-                                                                                           //Folder for when moving to dist
+    .pipe(gulpIf('*.png', gulp.dest('site/images'), gulp.dest('site/css'))); //Need to create separate sprite
     gulp.src('site/images/**/*.svg')
         .pipe(svgSprite({
-            cssFile: '../../scss/spriteSvg.scss',
+            cssFile: '../css/spriteSVG.css',
             svg: {
-                sprite: 'spriteSvg.svg',
+                sprite: 'images/spriteSVG.svg',
             }
         }))
-        .pipe(gulp.dest("site/images/sprite")); // Destination of SVG files for CSS and sprite
+        .pipe(gulp.dest("site/images")); // Destination of SVG files for CSS and sprite
     gulp.src('site/images/**/*.+(png|jpg|jpeg|gif|svg)') // Image compression again of newly created sprite file
     .pipe(cache(imagemin({
         interlaced: true
     })))
-    .pipe(gulp.dest('site/images'))
-    return gulp.src('site/images/sprite/**/*.+(png|jpg|jpeg|gif|svg])') // Only places sprite images in distribution folder
+    .pipe(gulp.dest('site/images'));
+    gulp.src('site/images/sprite.png') // Only places sprite images in distribution folder
     .pipe(gulp.dest('dist/images'));
 });
 
